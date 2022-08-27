@@ -3,7 +3,7 @@ import React from "react";
 function CardAction({id, archived}) {
 	return (
 		<div className="card-footer rounded-0 d-flex justify-content-between">
-			<button className="btn-danger btn btn-sm"><span className="ti ti-trash"></span> Delete {id}</button>
+			<button className="btn-danger btn btn-sm"><span className="ti ti-trash"></span> Delete</button>
 			{btnMove(archived, id)}
 		</div>
 	)

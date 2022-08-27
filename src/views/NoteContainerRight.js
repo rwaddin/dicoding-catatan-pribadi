@@ -16,33 +16,73 @@ class NoteContainerRight extends React.Component{
 					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
 					archived: false,
 					createdAt: '2022-04-14T04:27:34.572Z'
-				},{
+				},
+				{
 					id: 2,
-					title: "Bebe",
+					title: "Bebean",
 					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
 					archived: true,
 					createdAt: '2022-08-17T04:27:34.572Z'
 					},
-				]
+			],
+			temp:  [
+				{
+					id: 1,
+					title: "Babel",
+					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
+					archived: false,
+					createdAt: '2022-04-14T04:27:34.572Z'
+				},
+				{
+					id: 2,
+					title: "Bebean",
+					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
+					archived: true,
+					createdAt: '2022-08-17T04:27:34.572Z'
+				},
+			],
 		}
+
+		this.onSearch = this.onSearch.bind(this)
+	}
+
+	onCreate(){
+		this.setState((previousState) => {
+			return {
+				count: previousState.count + 1
+			};
+		});
+	}
+
+	onSearch(e){
+		let k = e.target.value;
+		this.setState((previousState) => {
+			if (k !== ""){
+				return {
+					notes: previousState.temp.filter((e)=>e.title.includes(k)),
+				};
+			}else{
+				return {
+					notes: previousState.temp
+				}
+			}
+		});
+	}
+
+	onMove(){
+
+	}
+
+	onRemove(){
+
 	}
 
 	render() {
 		return (
 			<div className="col-sm-8 d-flex flex-column gap-4">
-
-				<NoteSearch/>
+				<NoteSearch search={this.onSearch}/>
 				<ActiveWrapper {...this.state}/>
 				<ArchiveWrapper {...this.state}/>
-				{/*{
-					this.state.notes.map((n)=>{
-						if (n.archived){
-							return <ArchiveWrapper key={n.id} {...n}/>
-						}else {
-							return <ActiveWrapper key={n.id} {...n} />
-						}
-					})
-				}*/}
 			</div>
 		)
 	}
