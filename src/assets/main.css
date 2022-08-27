@@ -1,0 +1,13 @@
+.create-wrapper{
+    height: 100vh;
+    position: sticky;
+    top: 2em;
+}
+
+body{
+    background: #F8F8F8;
+}
+
+.input-note{
+    height: 11em !important;
+}
