@@ -25,7 +25,7 @@ function check(c) {
 				if (!n.archived){
 					return (
 						<div className="col-sm-4" key={n.id} >
-							<CardWrapper {...n}/>
+							<CardWrapper {...n} onRemove={c.onRemove} onMove={c.onMove}/>
 						</div>
 					)
 				}

@@ -4,7 +4,7 @@ import CardTitle from "./CardTitle";
 import CardTime from "./CardTime";
 import CardText from "./CardText";
 
-function CardWrapper({id, createdAt, title, body, archived}) {
+function CardWrapper({id, createdAt, title, body, archived, onRemove, onMove}) {
 	return (
 		<div className="card my-2">
 			<div className="card-body">
@@ -12,7 +12,7 @@ function CardWrapper({id, createdAt, title, body, archived}) {
 				<CardTime createdAt={createdAt}/>
 				<CardText body={body}/>
 			</div>
-			<CardAction id={id} archived={archived}/>
+			<CardAction id={id} archived={archived} onRemove={onRemove} onMove={onMove}/>
 		</div>
 	)
 }

@@ -44,6 +44,8 @@ class NoteContainerRight extends React.Component{
 		}
 
 		this.onSearch = this.onSearch.bind(this)
+		this.onRemove = this.onRemove.bind(this)
+		this.onMove = this.onMove.bind(this)
 	}
 
 	onCreate(){
@@ -69,20 +71,24 @@ class NoteContainerRight extends React.Component{
 		});
 	}
 
-	onMove(){
-
+	onMove(id){
+		console.warn("moved", id);
 	}
 
-	onRemove(){
-
+	onRemove(id){
+		let x = window.confirm("Are you sure ?");
+		if (x){
+			window.alert("deleted");
+		}
+		console.warn("remove", id);
 	}
 
 	render() {
 		return (
 			<div className="col-sm-8 d-flex flex-column gap-4">
 				<NoteSearch search={this.onSearch}/>
-				<ActiveWrapper {...this.state}/>
-				<ArchiveWrapper {...this.state}/>
+				<ActiveWrapper {...this.state} onRemove={this.onRemove} onMove={this.onMove}/>
+				<ArchiveWrapper {...this.state} onRemove={this.onRemove} onMove={this.onMove}/>
 			</div>
 		)
 	}
