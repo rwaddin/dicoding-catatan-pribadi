@@ -4,7 +4,7 @@
 - Tabler-icon 1.84.0
 
 # Feature
-- [ ] Create note
+- [x] Create note
 - [x] Search note
 - [x] Showing note
 - [x] Remove note
