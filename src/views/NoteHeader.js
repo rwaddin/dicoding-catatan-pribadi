@@ -6,7 +6,7 @@ function noteHeader() {
 			<div className="container-fluid justify-content-between">
 				<span className="navbar-text text-dark">Note's App</span>
 
-				<ul className="navbar-nav">
+				<ul className="navbar-nav d-flex flex-row">
 					<li className="nav-item">
 						<a className="nav-link" href="https://addin.my.id" target="_blank"><i className="ti ti-world"></i></a>
 					</li>
