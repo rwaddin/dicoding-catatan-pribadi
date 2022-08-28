@@ -72,15 +72,26 @@ class NoteContainerRight extends React.Component{
 	}
 
 	onMove(id){
-		console.warn("moved", id);
+		let e = this.state.temp;
+		let f = e.findIndex(b => b.id === id);
+		e[f].archived = !e[f].archived
+
+		this.sync(e);
 	}
 
 	onRemove(id){
 		let x = window.confirm("Are you sure ?");
 		if (x){
-			window.alert("deleted");
+			const nt = this.state.temp.filter(n => n.id !== id);
+			this.sync(nt)
 		}
-		console.warn("remove", id);
+	}
+
+	sync(e){
+		this.setState({
+			notes: e,
+			temp: e
+		});
 	}
 
 	render() {
