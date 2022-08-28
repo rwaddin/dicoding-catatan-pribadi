@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dicoding-catatan-pribadi/static/css/main.89ef908f.css",
-    "main.js": "/dicoding-catatan-pribadi/static/js/main.6fe92f05.js",
+    "main.js": "/dicoding-catatan-pribadi/static/js/main.152b4904.js",
     "static/media/tabler-icons.svg": "/dicoding-catatan-pribadi/static/media/tabler-icons.f7356660db738601b246.svg",
     "static/media/tabler-icons.eot": "/dicoding-catatan-pribadi/static/media/tabler-icons.89bdbb8f9e64832d7c72.eot",
     "static/media/tabler-icons.ttf": "/dicoding-catatan-pribadi/static/media/tabler-icons.062e031644b82491c4bc.ttf",
@@ -10,10 +10,10 @@
     "static/media/wave.svg": "/dicoding-catatan-pribadi/static/media/wave.494531e847c7d6559b86.svg",
     "index.html": "/dicoding-catatan-pribadi/index.html",
     "main.89ef908f.css.map": "/dicoding-catatan-pribadi/static/css/main.89ef908f.css.map",
-    "main.6fe92f05.js.map": "/dicoding-catatan-pribadi/static/js/main.6fe92f05.js.map"
+    "main.152b4904.js.map": "/dicoding-catatan-pribadi/static/js/main.152b4904.js.map"
   },
   "entrypoints": [
     "static/css/main.89ef908f.css",
-    "static/js/main.6fe92f05.js"
+    "static/js/main.152b4904.js"
   ]
 }
