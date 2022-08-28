@@ -1,6 +1,6 @@
 import React from "react";
-import CardWrapper from "../card/CardWrapper";
-import NoteEmpty from "../NoteEmpty";
+import CardWrapper from "./card/CardWrapper";
+import NoteEmpty from "./NoteEmpty";
 
 function ArchiveWrapper(props){
 	return (

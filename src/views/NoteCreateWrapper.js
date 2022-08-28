@@ -2,7 +2,7 @@ import React from "react";
 
 function NoteCreateWrapper({title, text, onChangeTitle, onChangeText, sisa, onSave}) {
 	return (
-		<div className="card shadow border border-dark">
+		<div className="card shadow border border-dark mb-4">
 			<div className="card-body">
 				<h2 className="mb-4"><i className="ti ti-pencil"></i> Create a note</h2>
 

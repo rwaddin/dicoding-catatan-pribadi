@@ -1,7 +1,7 @@
 import React from "react";
 
 import NoteHeader from "./NoteHeader";
-import NoteCreateWrapper from "./create/NoteCreateWrapper";
+import NoteCreateWrapper from "./NoteCreateWrapper";
 import NoteContainerRight from "./NoteContainerRight";
 
 class NoteContainer extends React.Component{
@@ -49,10 +49,10 @@ class NoteContainer extends React.Component{
 
   render() {
     return (
-      <div className="container">
+      <div className="container pt-3">
         <NoteHeader/>
         <div className="row">
-          <div className="col-sm-4 create-wrapper">
+          <div className="col-sm-4 create-wrapper d-flex flex-column">
             <NoteCreateWrapper {...this.state} onChangeTitle={this.onChangeTitle} onChangeText={this.onChangeText} onSave={() => this.myRef.current.onSave()} />
           </div>
           <NoteContainerRight ref={this.myRef} {...this.state}/>

@@ -1,13 +1,23 @@
-.create-wrapper{
-    height: 100vh;
-    position: sticky;
-    top: 2em;
-}
-
 body{
     background: #F8F8F8;
 }
 
+#root{
+    background-image: url("images/wave.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.create-wrapper{
+    /*height: 100vh;*/
+    /*position: sticky;*/
+    top: 2em;
+}
+
 .input-note{
     height: 11em !important;
+}
+
+.socmed ul{
+    list-style: none;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import NoteSearch from "./NoteSearch";
-import ActiveWrapper from "./active/ActiveWrapper";
-import ArchiveWrapper from "./archive/ArchiveWrapper";
+import ActiveWrapper from "./ActiveWrapper";
+import ArchiveWrapper from "./ArchiveWrapper";
 
 class NoteContainerRight extends React.Component{
 
