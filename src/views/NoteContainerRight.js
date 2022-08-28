@@ -7,40 +7,9 @@ class NoteContainerRight extends React.Component{
 
 	constructor(props) {
 		super(props);
-
 		this.state = {
-			notes : [
-				{
-					id: 1,
-					title: "Babel",
-					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
-					archived: false,
-					createdAt: '2022-04-14T04:27:34.572Z'
-				},
-				{
-					id: 2,
-					title: "Bebean",
-					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
-					archived: true,
-					createdAt: '2022-08-17T04:27:34.572Z'
-					},
-			],
-			temp:  [
-				{
-					id: 1,
-					title: "Babel",
-					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
-					archived: false,
-					createdAt: '2022-04-14T04:27:34.572Z'
-				},
-				{
-					id: 2,
-					title: "Bebean",
-					body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
-					archived: true,
-					createdAt: '2022-08-17T04:27:34.572Z'
-				},
-			],
+			notes : [],
+			temp:  [],
 		}
 
 		this.onSearch = this.onSearch.bind(this)
@@ -85,6 +54,30 @@ class NoteContainerRight extends React.Component{
 			const nt = this.state.temp.filter(n => n.id !== id);
 			this.sync(nt)
 		}
+	}
+
+	onSave(){
+		if (this.props.title===""){
+			window.alert("Title note is required");
+			return;
+		}
+		if (this.props.text===""){
+			window.alert("Body note is required");
+			return;
+		}
+
+		let n = {
+			id: +new Date(),
+			title: this.props.title,
+			body: this.props.text,
+			archived: false,
+			createdAt: new Date().toISOString()
+		};
+
+		let a = this.state.temp;
+		a.push(n)
+		this.sync(a);
+
 	}
 
 	sync(e){

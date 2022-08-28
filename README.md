@@ -5,7 +5,8 @@
 
 # Feature
 - [ ] Create note
-- [ ] Search note
-- [ ] Showing note
-- [ ] Remove note
-- [ ] Toggle move (active/archive)
+- [x] Search note
+- [x] Showing note
+- [x] Remove note
+- [x] Toggle move (active/archive)
+- [x] Counter word
