@@ -2,14 +2,15 @@ import React from "react";
 import NoteSearch from "./NoteSearch";
 import ActiveWrapper from "./ActiveWrapper";
 import ArchiveWrapper from "./ArchiveWrapper";
+import {getInitialData} from "../utils";
 
 class NoteContainerRight extends React.Component{
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			notes : [],
-			temp:  [],
+			notes : getInitialData(),
+			temp:  getInitialData(),
 		}
 
 		this.onSearch = this.onSearch.bind(this)

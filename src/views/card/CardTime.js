@@ -1,16 +1,10 @@
 import React from "react";
+import {showFormattedDate} from "../../utils";
 
 function CardTime({createdAt}) {
 	return (
-		<p className="small text-muted">{convert(createdAt)}</p>
+		<p className="small text-muted">{showFormattedDate(createdAt)}</p>
 	)
-}
-
-function convert(isoString) {
-	let x = new Date(isoString);
-	let a = x.toLocaleString('id', { month: 'long' });
-	let b = x.toLocaleString('id', { weekday: 'long' });
-	return `${b}, ${x.getDate()} ${a} ${x.getFullYear()}`;
 }
 
 export default CardTime;
